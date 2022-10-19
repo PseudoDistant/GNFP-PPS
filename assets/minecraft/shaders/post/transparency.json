@@ -72,8 +72,16 @@
             "outtarget": "final",
             "uniforms": [
                 {
-                    "name": "ColorScale",
-                    "values": [0.91, 1.0, 0.91]
+                    "name": "RedMatrix",
+                    "values": [0.91, 0.0, 0.0]
+                },
+                {
+                    "name": "GreenMatrix",
+                    "values": [0.0, 1.0, 0.0]
+                },
+                {
+                    "name": "BlueMatrix",
+                    "values": [0.0, 0.0, 0.96]
                 },
                 {
                     "name": "Saturation",
