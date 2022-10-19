@@ -73,7 +73,7 @@
             "uniforms": [
                 {
                     "name": "ColorScale",
-                    "values": [0.91, 0.98, 0.91]
+                    "values": [0.91, 1.0, 0.91]
                 },
                 {
                     "name": "Saturation",
