@@ -1,0 +1,90 @@
+{
+    "targets": [
+        "water",
+        "translucent",
+        "itemEntity",
+        "particles",
+        "clouds",
+        "weather",
+        "swap",
+        "final"
+    ],
+    "passes": [
+        {
+            "name": "transparency",
+            "intarget": "minecraft:main",
+            "outtarget": "final",
+            "auxtargets": [
+                {
+                    "name": "DiffuseDepthSampler",
+                    "id": "minecraft:main:depth"
+                },
+                {
+                    "name": "TranslucentSampler",
+                    "id": "translucent"
+                },
+                {
+                    "name": "TranslucentDepthSampler",
+                    "id": "translucent:depth"
+                },
+                {
+                    "name": "ItemEntitySampler",
+                    "id": "itemEntity"
+                },
+                {
+                    "name": "ItemEntityDepthSampler",
+                    "id": "itemEntity:depth"
+                },
+                {
+                    "name": "ParticlesSampler",
+                    "id": "particles"
+                },
+                {
+                    "name": "ParticlesDepthSampler",
+                    "id": "particles:depth"
+                },
+                {
+                    "name": "CloudsSampler",
+                    "id": "clouds"
+                },
+                {
+                    "name": "CloudsDepthSampler",
+                    "id": "clouds:depth"
+                },
+                {
+                    "name": "WeatherSampler",
+                    "id": "weather"
+                },
+                {
+                    "name": "WeatherDepthSampler",
+                    "id": "weather:depth"
+                }
+            ]
+        },
+        {
+            "name": "blit",
+            "intarget": "final",
+            "outtarget": "minecraft:main"
+        },
+        {
+            "name": "color_convolve",
+            "intarget": "minecraft:main",
+            "outtarget": "final",
+            "uniforms": [
+                {
+                    "name": "ColorScale",
+                    "values": [0.91, 1.0, 0.91]
+                },
+                {
+                    "name": "Saturation",
+                    "values": [ 1.34 ]
+                }
+            ]
+        },
+        {
+            "name": "blit",
+            "intarget": "final",
+            "outtarget": "minecraft:main"
+        }
+    ]
+}
